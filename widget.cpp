@@ -25,7 +25,7 @@ Widget::Widget(QWidget *parent) :
     connect(ui->startPushButton,        SIGNAL(clicked()),                      this,   SLOT(start())           );
     connect(ui->stopPushButton,         SIGNAL(clicked()),                      this,   SLOT(stop())            );
     connect(sendRequestTimer,           SIGNAL(timeout()),                      this,   SLOT(sendRequests())    );
-    connect(updateLCDTimer,             SIGNAL(timeout()),                      this,   SLOT(updateLCDData())   );
+    //connect(updateLCDTimer,             SIGNAL(timeout()),                      this,   SLOT(updateLCDData())   );
 
 }
 
@@ -42,7 +42,7 @@ Widget::~Widget()
 
 void Widget::writeToConsole(QString &logData)
 {
-    ui->consoleTextBrowser->insertHtml(logData);
+    ui->consoleTextBrowser->insertHtml("r");//logData);
     QScrollBar *sb = ui->consoleTextBrowser->verticalScrollBar();
     sb->setValue(sb->maximum());
 }
