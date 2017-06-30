@@ -1,1 +1,1 @@
-client for hashingExperiment
+client for [hashingExperiment](https://github.com/shbobur/hashingExperiment)
